@@ -4,23 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heaven Minded Studios | Beyond Entertainment — We Inspire</title>
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Heaven Minded Studios is a purpose-driven creative studio founded by AD Prince. We create music, films, brands, and digital experiences that inspire faith, hope, healing, and transformation with premium spiritual excellence." />
     <meta name="keywords" content="Heaven Minded Studios, AD Prince, music production, film, cinematic storytelling, branding, web design, Ghana, faith-based creative agency, spiritual excellence" />
     <meta name="author" content="AD Prince" />
-    
-    <!-- Open Graph Metadata -->
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Heaven Minded Studios | Cinematic Spiritual Creative Agency" />
-    <meta property="og:description" content="A premium, faith-driven movement where elite artistry meets divine purpose. Discover cinematic branding, inspiring music, and Web Experiences." />
+    <meta property="og:description" content="A premium, faith-driven movement where elite artistry meets divine purpose." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1516280440614-37939bbacd6a?auto=format&fit=crop&q=80&w=1200" />
+    <meta property="og:image" content="./public/images/hero-cinematic.jpg" />
     <meta property="og:site_name" content="Heaven Minded Studios" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cromorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
     <!-- Tailwind CSS 3 CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -43,203 +43,151 @@
             animation: {
               'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
               'bounce-slow': 'bounce 4s infinite',
-              'glow-slow': 'glow 3s ease-in-out infinite alternate',
             },
-            keyframes: {
-              glow: {
-                '0%': { boxShadow: '0 0 10px rgba(201,168,76,0.2)' },
-                '100%': { boxShadow: '0 0 25px rgba(201,168,76,0.4)' }
-              }
-            }
           }
         }
       }
     </script>
 
-    <!-- Supplemental Cinematic CSS -->
     <style>
-      /* Ensure scroll behavior and baseline colors */
-      html {
-        scroll-behavior: smooth;
-        background-color: #0A0E1A;
-        overflow-x: hidden;
-      }
-      
-      /* Sculpted Scrollbar */
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0A0E1A;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #C9A84C;
-        border-radius: 6px;
-        border: 2px solid #0A0E1A;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #F5F0E8;
-      }
+      html { scroll-behavior: smooth; background-color: #0A0E1A; overflow-x: hidden; }
 
-      /* Scroll anim trigger base */
+      ::-webkit-scrollbar { width: 10px; }
+      ::-webkit-scrollbar-track { background: #0A0E1A; }
+      ::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 6px; border: 2px solid #0A0E1A; }
+      ::-webkit-scrollbar-thumb:hover { background: #F5F0E8; }
+
       .reveal {
         opacity: 0;
         transform: translateY(40px);
         transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
         will-change: opacity, transform;
       }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      .reveal.active { opacity: 1; transform: translateY(0); }
 
-      /* Slow parallax for section visuals */
-      .parallax-wrapper {
-        position: relative;
-        overflow: hidden;
-      }
+      .text-glow { text-shadow: 0 0 15px rgba(201,168,76,0.25); }
 
-      /* Text reflection / gold stroke effect */
-      .text-glow {
-        text-shadow: 0 0 15px rgba(201,168,76,0.25);
-      }
-
-      /* Horizontal line separator with gold glow dot */
       .gold-divider {
-        position: relative;
-        height: 1px;
+        position: relative; height: 1px;
         background: linear-gradient(90deg, transparent, #C9A84C 50%, transparent);
       }
       .gold-divider::after {
-        content: '✦';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #C9A84C;
-        font-size: 14px;
-        background: #0A0E1A;
-        padding: 0 10px;
+        content: '✦'; position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%); color: #C9A84C; font-size: 14px;
+        background: #0A0E1A; padding: 0 10px;
       }
-
-      /* Ivory divider section version */
       .gold-divider-cream {
-        position: relative;
-        height: 1px;
+        position: relative; height: 1px;
         background: linear-gradient(90deg, transparent, rgba(201,168,76,0.4) 50%, transparent);
       }
       .gold-divider-cream::after {
-        content: '✦';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #C9A84C;
-        font-size: 14px;
-        background: #F5F0E8;
-        padding: 0 10px;
+        content: '✦'; position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%); color: #C9A84C; font-size: 14px;
+        background: #F5F0E8; padding: 0 10px;
       }
 
-      /* Star dust canvas context pointer-events-none */
       #stars-canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 1;
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        pointer-events: none; z-index: 1;
       }
 
-      /* Editorial layered look */
+      /* Hero image overlay */
+      .hero-bg {
+        position: absolute; inset: 0;
+        background-image: url('./public/images/hero-cinematic.jpg');
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        opacity: 0.18;
+        z-index: 0;
+      }
+
+      /* Studio / about section image bg */
+      .studio-bg-img {
+        background-image: url('./public/images/studio-bg.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+
       .editorial-frame {
         position: relative;
       }
       .editorial-frame::before {
-        content: '';
-        position: absolute;
-        inset: -12px;
-        border: 1px solid rgba(201,168,76,0.3);
-        pointer-events: none;
-        z-index: 0;
+        content: ''; position: absolute; inset: -12px;
+        border: 1px solid rgba(201,168,76,0.3); pointer-events: none; z-index: 0;
         transition: inset 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.6s;
       }
-      .editorial-frame:hover::before {
-        inset: -20px;
-        border-color: rgba(201,168,76,0.8);
-      }
+      .editorial-frame:hover::before { inset: -20px; border-color: rgba(201,168,76,0.8); }
 
-      /* Card glow overlay */
-      .card-glow {
-        transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-      }
+      .card-glow { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
       .card-glow:hover {
         transform: translateY(-8px);
         box-shadow: 0 20px 40px rgba(0,0,0,0.15), 0 0 25px rgba(201,168,76,0.15);
         border-color: rgba(201,168,76,0.5);
       }
 
-      /* Project filter active button styles */
-      .filter-btn {
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      }
+      .filter-btn { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
       .filter-btn.active {
-        background-color: #C9A84C;
-        color: #0A0E1A;
+        background-color: #C9A84C; color: #0A0E1A;
         box-shadow: 0 4px 15px rgba(201,168,76,0.3);
       }
 
-      /* Microinteractions helper */
-      .btn-luxury {
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      }
+      .btn-luxury { position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
       .btn-luxury::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 300%;
-        height: 300%;
-        background: rgba(255,255,255,0.1);
+        content: ''; position: absolute; top: 50%; left: 50%;
+        width: 300%; height: 300%; background: rgba(255,255,255,0.1);
         transform: translate(-50%, -50%) scale(0);
-        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        border-radius: 50%;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); border-radius: 50%;
       }
-      .btn-luxury:hover::before {
-        transform: translate(-50%, -50%) scale(1);
-      }
+      .btn-luxury:hover::before { transform: translate(-50%, -50%) scale(1); }
 
-      /* Success message transition */
+      /* Portfolio item real image backgrounds */
+      .portfolio-item { transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+      .portfolio-item .item-bg {
+        position: absolute; inset: 0;
+        background-size: cover; background-position: center;
+        opacity: 0.35; transition: opacity 0.5s ease;
+      }
+      .portfolio-item:hover .item-bg { opacity: 0.55; }
+
       #form-success {
         display: none;
         animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
       }
-
       @keyframes fadeIn {
         from { opacity: 0; transform: scale(0.95); }
         to { opacity: 1; transform: scale(1); }
+      }
+
+      /* AD Prince photo frame */
+      .founder-photo {
+        background-image: url('./public/images/ad-prince.jpg');
+        background-size: cover;
+        background-position: center top;
       }
     </style>
   </head>
   <body class="font-sans text-cream bg-midnight antialiased selection:bg-gold selection:text-midnight">
 
-    <!-- 1. STICKY NAVBAR -->
+    <!-- ==================== 1. STICKY NAVBAR ==================== -->
     <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out py-6 px-6 lg:px-16" role="banner">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
-        
-        <!-- Logo Branding -->
-        <a href="#hero" class="flex items-center gap-3 group focus:outline-none focus:ring-1 focus:ring-gold py-1" aria-label="Heaven Minded Studios Logo">
-          <div class="relative w-12 h-12 flex items-center justify-center bg-royal-blue border border-gold/30 rounded-full transition-all duration-500 group-hover:border-gold group-hover:shadow-[0_0_15px_rgba(201,168,76,0.3)]">
-            <!-- Star from primary logo visual -->
-            <span class="absolute top-[8px] text-[10px] text-gold animate-pulse-slow">★</span>
-            <!-- Icons below - microphone and camera elements -->
-            <svg class="w-6 h-6 text-gold mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
-              <path d="M19 10v1a7 7 0 0 1-14 0v-1"/>
-              <line x1="12" x2="12" y1="19" y2="22"/>
-            </svg>
+
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none focus:ring-1 focus:ring-gold py-1" aria-label="Heaven Minded Studios home">
+          <!-- Logo image — falls back to text mark if image missing -->
+          <div class="relative w-12 h-12 flex items-center justify-center bg-royal-blue border border-gold/30 rounded-full transition-all duration-500 group-hover:border-gold group-hover:shadow-[0_0_15px_rgba(201,168,76,0.3)] overflow-hidden">
+            <img src="./public/images/logo.png" alt="Heaven Minded Studios logo mark" class="w-10 h-10 object-contain"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <!-- Fallback icon if logo.png is missing -->
+            <div style="display:none;" class="w-full h-full items-center justify-center">
+              <svg class="w-6 h-6 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                <path d="M19 10v1a7 7 0 0 1-14 0v-1"/>
+                <line x1="12" x2="12" y1="19" y2="22"/>
+              </svg>
+            </div>
           </div>
           <div class="flex flex-col select-none">
             <span class="font-serif text-xl font-medium tracking-wide text-white group-hover:text-gold transition-colors duration-300">Heaven Minded</span>
@@ -247,8 +195,8 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-8 lg:gap-12" role="navigation">
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 lg:gap-12" role="navigation" aria-label="Main navigation">
           <a href="#hero" class="text-sm font-medium text-cream hover:text-gold tracking-wide transition-colors duration-300">Home</a>
           <a href="#services" class="text-sm font-medium text-cream hover:text-gold tracking-wide transition-colors duration-300">Services</a>
           <a href="#portfolio" class="text-sm font-medium text-cream hover:text-gold tracking-wide transition-colors duration-300">Portfolio</a>
@@ -257,26 +205,24 @@
           <a href="#contact" class="text-sm font-medium text-cream hover:text-gold tracking-wide transition-colors duration-300">Contact</a>
         </nav>
 
-        <!-- CTA Action -->
         <div class="hidden md:block">
-          <a href="#contact" class="btn-luxury px-6 py-3 bg-gold text-midnight border border-gold font-semibold text-xs tracking-widest uppercase transition-all duration-300 hover:shadow-[0_0_20px_rgba(201,168,76,0.4)] focus:outline-none focus:ring-2 focus:ring-gold rounded-none">
+          <a href="#contact" class="btn-luxury px-6 py-3 bg-gold text-midnight border border-gold font-semibold text-xs tracking-widest uppercase transition-all duration-300 hover:shadow-[0_0_20px_rgba(201,168,76,0.4)] focus:outline-none focus:ring-2 focus:ring-gold">
             Start a Project
           </a>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-between w-6 h-5 focus:outline-none focus:ring-1 focus:ring-gold" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle mobile Menu">
+        <!-- Mobile hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-between w-6 h-5 focus:outline-none focus:ring-1 focus:ring-gold" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle mobile menu">
           <span class="w-full h-[2px] bg-gold rounded transition-all duration-300 origin-left"></span>
           <span class="w-full h-[2px] bg-gold rounded transition-all duration-300"></span>
           <span class="w-full h-[2px] bg-gold rounded transition-all duration-300 origin-left"></span>
         </button>
-
       </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
+    <!-- Mobile menu overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-midnight/98 z-40 flex flex-col items-center justify-center gap-8 transition-all duration-500 transform translate-x-full h-screen">
-      <nav class="flex flex-col items-center gap-6" role="navigation">
+      <nav class="flex flex-col items-center gap-6" role="navigation" aria-label="Mobile navigation">
         <a href="#hero" class="mobile-nav-link text-2xl font-serif text-cream hover:text-gold transition-colors duration-300">Home</a>
         <a href="#services" class="mobile-nav-link text-2xl font-serif text-cream hover:text-gold transition-colors duration-300">Services</a>
         <a href="#portfolio" class="mobile-nav-link text-2xl font-serif text-cream hover:text-gold transition-colors duration-300">Portfolio</a>
@@ -284,41 +230,40 @@
         <a href="#testimonials" class="mobile-nav-link text-2xl font-serif text-cream hover:text-gold transition-colors duration-300">Testimonials</a>
         <a href="#contact" class="mobile-nav-link text-2xl font-serif text-cream hover:text-gold transition-colors duration-300">Contact</a>
       </nav>
-      <a href="#contact" id="mobile-cta" class="px-8 py-4 bg-gold text-midnight border border-gold font-semibold tracking-widest text-xs uppercase transition-all hover:bg-white hover:border-white focus:outline-none">
+      <a href="#contact" id="mobile-cta" class="px-8 py-4 bg-gold text-midnight font-semibold tracking-widest text-xs uppercase transition-all hover:bg-white hover:border-white focus:outline-none">
         Start a Project
       </a>
     </div>
 
-    <!-- 2. HERO SECTION -->
+    <!-- ==================== 2. HERO SECTION ==================== -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center bg-midnight overflow-hidden py-24 lg:py-0">
-      
-      <!-- Interactive Starfield Particle Canvas -->
+
+      <!-- Real hero background image -->
+      <div class="hero-bg" role="img" aria-label="Cinematic studio background"></div>
+
+      <!-- Star canvas on top of image -->
       <canvas id="stars-canvas"></canvas>
 
-      <!-- Soft Ambient Gold Glows (Cinematic Depth) -->
-      <div id="parallax-glow-1" class="absolute w-[350px] md:w-[600px] h-[350px] md:h-[600px] top-1/4 left-1/10 bg-gold/10 opacity-30 rounded-full blur-[100px] md:blur-[160px] pointer-events-none transform -translate-x-1/2 -translate-y-1/2"></div>
-      <div id="parallax-glow-2" class="absolute w-[400px] md:w-[700px] h-[400px] md:h-[700px] bottom-10 right-1/10 bg-royal-blue opacity-50 rounded-full blur-[120px] md:blur-[180px] pointer-events-none"></div>
+      <!-- Ambient glows -->
+      <div id="parallax-glow-1" class="absolute w-[350px] md:w-[600px] h-[350px] md:h-[600px] top-1/4 left-1/4 bg-gold/10 opacity-30 rounded-full blur-[100px] md:blur-[160px] pointer-events-none"></div>
+      <div id="parallax-glow-2" class="absolute w-[400px] md:w-[700px] h-[400px] md:h-[700px] bottom-10 right-0 bg-royal-blue opacity-50 rounded-full blur-[120px] md:blur-[180px] pointer-events-none"></div>
 
-      <!-- Core Content -->
+      <!-- Core content -->
       <div class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-16 text-center">
-        
-        <!-- Subtle Trust Banner Line -->
+
         <p class="inline-flex items-center gap-2 px-4 py-2 bg-royal-blue/60 border border-gold/15 text-gold text-xs font-semibold tracking-widest uppercase mb-8 md:mb-12 animate-pulse-slow">
           <span class="w-1.5 h-1.5 bg-gold rounded-full inline-block"></span>
-          Currently Accepting New Projects & Collaborations
+          Currently Accepting New Projects &amp; Collaborations
         </p>
 
-        <!-- Big Cinematic Headline -->
         <h1 class="font-serif text-5xl md:text-7xl lg:text-9xl text-white font-medium tracking-tight mb-8 max-w-5xl mx-auto leading-tight md:leading-none text-glow">
           Where Vision Meets <span class="text-gold italic">Purpose.</span>
         </h1>
 
-        <!-- High-conversion subheadline -->
         <p class="font-sans text-base md:text-xl text-cream/80 font-light max-w-3xl mx-auto mb-10 md:mb-14 leading-relaxed">
           We craft majestic cinematic brands, deep structural music, soulful visuals, and elite digital experiences designed to inspire, transform, and leave eternal impact.
         </p>
 
-        <!-- Action Grid Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href="#contact" class="w-full sm:w-auto px-8 py-4 bg-gold text-midnight border border-gold font-bold text-xs tracking-widest uppercase shadow-[0_0_15px_rgba(201,168,76,0.2)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(201,168,76,0.5)] hover:scale-105 active:scale-95 focus:outline-none">
             Start a Project
@@ -327,49 +272,40 @@
             View Our Work
           </a>
         </div>
-
       </div>
 
-      <!-- Elevated Scenic Scroll indicator -->
+      <!-- Scroll indicator -->
       <a href="#services" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 group z-10" aria-label="Scroll down to Services">
         <span class="font-mono text-[9px] tracking-[0.4em] uppercase text-gold/60 group-hover:text-gold transition-colors duration-300">Discover</span>
         <div class="w-6 h-10 border border-gold/40 rounded-full flex justify-center p-1 group-hover:border-gold transition-colors duration-300">
           <div class="w-1 h-2 bg-gold rounded-full animate-bounce-slow"></div>
         </div>
       </a>
-
     </section>
 
-    <!-- Elegant section divider -->
     <div class="gold-divider"></div>
 
-    <!-- 3. SERVICES SECTION -->
+    <!-- ==================== 3. SERVICES SECTION ==================== -->
     <section id="services" class="relative bg-cream text-midnight py-24 lg:py-32 overflow-hidden">
-      
-      <!-- Design Background Details -->
       <div class="absolute -top-1/4 right-0 w-96 h-96 bg-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
-
       <div class="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
-        
-        <!-- Section Header -->
+
         <div class="max-w-4xl mx-auto text-center mb-16 md:mb-24 reveal">
           <span class="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold">WHAT WE CREATE</span>
           <h2 class="font-serif text-4xl md:text-6xl text-midnight font-medium mt-4 mb-6 leading-tight">
             We blend artistry with intentional design.
           </h2>
           <p class="font-sans text-lg text-midnight/75 font-light leading-relaxed max-w-2xl mx-auto">
-            Heaven Minded Studios pairs elite world-class execution with deep spiritual depth, structuring beautiful visual, rhythmic, and conceptual transformations.
+            Heaven Minded Studios pairs elite world-class execution with deep spiritual depth — structuring beautiful visual, rhythmic, and conceptual transformations.
           </p>
         </div>
 
-        <!-- 3-Column Premium Services Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          
-          <!-- Brand Identity Card -->
-          <article class="bg-white border border-gold/15 p-8 lg:p-10 card-glow duration-500 hover:border-gold flex flex-col justify-between h-full reveal reveal-left">
+
+          <!-- Brand Identity -->
+          <article class="bg-white border border-gold/15 p-8 lg:p-10 card-glow flex flex-col justify-between h-full reveal">
             <div>
-              <!-- Visual Icon -->
-              <div class="w-14 h-14 flex items-center justify-center bg-cream/30 border border-gold/30 rounded-none mb-8 text-gold">
+              <div class="w-14 h-14 flex items-center justify-center bg-cream/30 border border-gold/30 mb-8 text-gold">
                 <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m12 3-1.912 5.886L4 10.8l5.886 1.912L12 21l1.912-5.886L20 13.2l-5.886-1.912Z"/>
                 </svg>
@@ -378,7 +314,7 @@
               <p class="font-sans text-sm text-midnight/75 leading-relaxed mb-6">
                 Creating luxury, enduring logos, intentional color landscapes, visual architectures, and direct creative guidelines that capture internal message purity.
               </p>
-              <ul class="space-y-3 mb-8 border-t border-gold-dim pt-6 font-sans text-xs font-semibold text-midnight/80 uppercase tracking-widest">
+              <ul class="space-y-3 mb-8 border-t border-gold/10 pt-6 font-sans text-xs font-semibold text-midnight/80 uppercase tracking-widest">
                 <li class="flex items-center gap-2"><span class="text-gold">✦</span> Creative Direction</li>
                 <li class="flex items-center gap-2"><span class="text-gold">✦</span> Visual Identity Systems</li>
                 <li class="flex items-center gap-2"><span class="text-gold">✦</span> Premium Logo Design</li>
@@ -390,11 +326,10 @@
             </a>
           </article>
 
-          <!-- Web Design & Development Card -->
-          <article class="bg-white border border-gold/15 p-8 lg:p-10 card-glow duration-500 hover:border-gold flex flex-col justify-between h-full reveal">
+          <!-- Web Design -->
+          <article class="bg-white border border-gold/15 p-8 lg:p-10 card-glow flex flex-col justify-between h-full reveal">
             <div>
-              <!-- Visual Icon -->
-              <div class="w-14 h-14 flex items-center justify-center bg-cream/30 border border-gold/30 rounded-none mb-8 text-gold">
+              <div class="w-14 h-14 flex items-center justify-center bg-cream/30 border border-gold/30 mb-8 text-gold">
                 <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <rect width="20" height="14" x="2" y="3" rx="2"/>
                   <line x1="8" x2="16" y1="21" y2="21"/>
@@ -403,9 +338,9 @@
               </div>
               <h3 class="font-serif text-2xl lg:text-3xl font-medium tracking-tight mb-4 text-midnight">Web Design</h3>
               <p class="font-sans text-sm text-midnight/75 leading-relaxed mb-6">
-                Constructing highly customizable high-converting websites that perform beautifully at the scale of modern digital excellence. Designed for impact.
+                Constructing highly customizable, high-converting websites that perform beautifully at the scale of modern digital excellence. Designed for impact.
               </p>
-              <ul class="space-y-3 mb-8 border-t border-gold-dim pt-6 font-sans text-xs font-semibold text-midnight/80 uppercase tracking-widest">
+              <ul class="space-y-3 mb-8 border-t border-gold/10 pt-6 font-sans text-xs font-semibold text-midnight/80 uppercase tracking-widest">
                 <li class="flex items-center gap-2"><span class="text-gold">✦</span> Bespoke Landing Pages</li>
                 <li class="flex items-center gap-2"><span class="text-gold">✦</span> Cinematic UI/UX Design</li>
                 <li class="flex items-center gap-2"><span class="text-gold">✦</span> Responsive Experiences</li>
@@ -417,21 +352,21 @@
             </a>
           </article>
 
-          <!-- Content & Media Production Card -->
-          <article class="bg-white border border-gold/15 p-8 lg:p-10 card-glow duration-500 hover:border-gold flex flex-col justify-between h-full reveal reveal-right">
+          <!-- Media & Music -->
+          <article class="bg-white border border-gold/15 p-8 lg:p-10 card-glow flex flex-col justify-between h-full reveal">
             <div>
-              <!-- Visual Icon -->
-              <div class="w-14 h-14 flex items-center justify-center bg-cream/30 border border-gold/30 rounded-none mb-8 text-gold">
+              <div class="w-14 h-14 flex items-center justify-center bg-cream/30 border border-gold/30 mb-8 text-gold">
                 <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2v20"/>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                  <path d="M9 18V5l12-2v13"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="18" cy="16" r="3"/>
                 </svg>
               </div>
-              <h3 class="font-serif text-2xl lg:text-3xl font-medium tracking-tight mb-4 text-midnight">Media & Music</h3>
+              <h3 class="font-serif text-2xl lg:text-3xl font-medium tracking-tight mb-4 text-midnight">Media &amp; Music</h3>
               <p class="font-sans text-sm text-midnight/75 leading-relaxed mb-6">
-                Creating soulful audio soundtracks, detailed gospel productions, and stunning cinematic video media formats that move human emotions with purpose.
+                Creating soulful audio soundtracks, detailed gospel productions, and stunning cinematic video formats that move human emotions with divine purpose.
               </p>
-              <ul class="space-y-3 mb-8 border-t border-gold-dim pt-6 font-sans text-xs font-semibold text-midnight/80 uppercase tracking-widest">
+              <ul class="space-y-3 mb-8 border-t border-gold/10 pt-6 font-sans text-xs font-semibold text-midnight/80 uppercase tracking-widest">
                 <li class="flex items-center gap-2"><span class="text-gold">✦</span> Modern Music Production</li>
                 <li class="flex items-center gap-2"><span class="text-gold">✦</span> Cinematic Videography</li>
                 <li class="flex items-center gap-2"><span class="text-gold">✦</span> Ministry Media Content</li>
@@ -444,18 +379,15 @@
           </article>
 
         </div>
-
       </div>
     </section>
 
-    <!-- Elegant section divider -->
     <div class="gold-divider-cream"></div>
 
-    <!-- 4. PORTFOLIO SECTION -->
+    <!-- ==================== 4. PORTFOLIO SECTION ==================== -->
     <section id="portfolio" class="bg-midnight py-24 lg:py-32 overflow-hidden">
       <div class="max-w-7xl mx-auto px-6 lg:px-16">
-        
-        <!-- Section Header -->
+
         <div class="max-w-4xl mx-auto text-center mb-16 reveal">
           <span class="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold">OUR WORK SPEAKS</span>
           <h2 class="font-serif text-4xl md:text-6xl text-white font-medium mt-4 mb-6 leading-tight text-glow">
@@ -466,31 +398,23 @@
           </p>
         </div>
 
-        <!-- Filter Navigation -->
+        <!-- Filter tabs -->
         <div class="flex flex-wrap justify-center items-center gap-3 md:gap-4 mb-14 reveal">
-          <button class="filter-btn px-6 py-2.5 border border-gold/30 text-gold text-xs font-semibold uppercase tracking-widest active active:bg-gold active:text-midnight focus:outline-none" data-filter="all">All Work</button>
+          <button class="filter-btn active px-6 py-2.5 border border-gold/30 text-gold text-xs font-semibold uppercase tracking-widest focus:outline-none" data-filter="all">All Work</button>
           <button class="filter-btn px-6 py-2.5 border border-gold/30 text-gold text-xs font-semibold uppercase tracking-widest focus:outline-none" data-filter="branding">Branding</button>
           <button class="filter-btn px-6 py-2.5 border border-gold/30 text-gold text-xs font-semibold uppercase tracking-widest focus:outline-none" data-filter="web">Web Design</button>
           <button class="filter-btn px-6 py-2.5 border border-gold/30 text-gold text-xs font-semibold uppercase tracking-widest focus:outline-none" data-filter="music">Music</button>
-          <button class="filter-btn px-6 py-2.5 border border-gold/30 text-gold text-xs font-semibold uppercase tracking-widest focus:outline-none" data-filter="creative">Creative Direction</button>
+          <button class="filter-btn px-6 py-2.5 border border-gold/30 text-gold text-xs font-semibold uppercase tracking-widest focus:outline-none" data-filter="creative">Creative</button>
         </div>
 
-        <!-- Portfolio Cards Grid -->
+        <!-- Portfolio grid -->
         <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          <!-- Code: Kingdom Sound -->
-          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 transition-all duration-700 hover:border-gold/50 cursor-pointer" data-category="music">
-            <!-- Cinematic Ambient Art Background -->
-            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/60 to-transparent z-10"></div>
-            <!-- Custom visual representation background representing music cover with color palette gold/navy -->
-            <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/30 via-royal-blue to-midnight flex items-center justify-center">
-              <svg class="w-24 h-24 text-gold/30 group-hover:scale-110 duration-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                <path d="M9 18V5l12-2v13"/>
-                <circle cx="6" cy="18" r="3"/>
-                <circle cx="18" cy="16" r="3"/>
-              </svg>
-            </div>
-            
+
+          <!-- Kingdom Sound — uses portfolio-1.jpg as primary portfolio image -->
+          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 cursor-pointer hover:border-gold/50" data-category="music">
+            <div class="item-bg" style="background-image: url('./public/images/portfolio-1.jpg');" role="img" aria-label="Kingdom Sound project thumbnail"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/55 to-transparent z-10"></div>
+            <div class="absolute inset-0 opacity-30 group-hover:opacity-0 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold/20 via-royal-blue to-midnight"></div>
             <div class="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
               <span class="font-sans text-[10px] font-bold tracking-[0.2em] text-gold uppercase">Music Production</span>
               <h3 class="font-serif text-3xl font-medium text-white mt-2 mb-3">Kingdom Sound</h3>
@@ -498,22 +422,16 @@
                 An archival deep-rhythm gospel album crafted for ultimate healing atmosphere and high-end acoustic space.
               </p>
               <div class="mt-4 flex items-center gap-2 text-xs text-gold font-semibold uppercase tracking-widest">
-                <span>View Cinematic Cover</span>
-                <span class="text-xs">→</span>
+                <span>View Cinematic Cover</span><span>→</span>
               </div>
             </div>
           </div>
 
-          <!-- Code: Grace Culture -->
-          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 transition-all duration-700 hover:border-gold/50 cursor-pointer" data-category="web">
-            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/60 to-transparent z-10"></div>
-            <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-royal-blue via-[#182343] to-midnight flex items-center justify-center">
-              <svg class="w-24 h-24 text-gold/30 group-hover:scale-110 duration-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                <rect width="20" height="14" x="2" y="3" rx="2"/>
-                <line x1="8" x2="16" y1="21" y2="21"/>
-              </svg>
-            </div>
-            
+          <!-- Grace Culture — uses background.jpg -->
+          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 cursor-pointer hover:border-gold/50" data-category="web">
+            <div class="item-bg" style="background-image: url('./public/images/background.jpg');" role="img" aria-label="Grace Culture project thumbnail"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/55 to-transparent z-10"></div>
+            <div class="absolute inset-0 opacity-30 group-hover:opacity-0 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-royal-blue via-[#182343] to-midnight"></div>
             <div class="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
               <span class="font-sans text-[10px] font-bold tracking-[0.2em] text-gold uppercase">Web Platform</span>
               <h3 class="font-serif text-3xl font-medium text-white mt-2 mb-3">Grace Culture</h3>
@@ -521,43 +439,39 @@
                 A custom bespoke virtual parish built with deep accessibility, immersive media channels, and pristine minimalist UX.
               </p>
               <div class="mt-4 flex items-center gap-2 text-xs text-gold font-semibold uppercase tracking-widest">
-                <span>Explore Site Design</span>
-                <span class="text-xs">→</span>
+                <span>Explore Site Design</span><span>→</span>
               </div>
             </div>
           </div>
 
-          <!-- Code: Elevation Conference -->
-          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 transition-all duration-700 hover:border-gold/50 cursor-pointer" data-category="branding">
-            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/60 to-transparent z-10"></div>
-            <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-gold/20 via-royal-blue to-midnight flex items-center justify-center">
+          <!-- Elevation Conference — gradient placeholder -->
+          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 cursor-pointer hover:border-gold/50" data-category="branding">
+            <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-gold/20 via-royal-blue to-midnight flex items-center justify-center z-0">
               <svg class="w-24 h-24 text-gold/30 group-hover:scale-110 duration-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
                 <path d="M12 2A10 10 0 0 0 2 12c.005 3.336 1.745 6.438 4.6 8.2l3-3a4 4 0 1 1 4.8 0l3 3c2.855-1.762 4.595-4.864 4.6-8.2a10 10 0 0 0-10-10Z"/>
               </svg>
             </div>
-            
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/55 to-transparent z-10"></div>
             <div class="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
               <span class="font-sans text-[10px] font-bold tracking-[0.2em] text-gold uppercase">Brand Campaign</span>
               <h3 class="font-serif text-3xl font-medium text-white mt-2 mb-3">Elevation Conference</h3>
               <p class="font-sans text-xs text-cream/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">
-                Complete dynamic branding visual stack, including responsive typography layers, motion graphics, and large format prints.
+                Complete dynamic branding visual stack with responsive typography layers, motion graphics, and large format prints.
               </p>
               <div class="mt-4 flex items-center gap-2 text-xs text-gold font-semibold uppercase tracking-widest">
-                <span>View Identity Stack</span>
-                <span class="text-xs">→</span>
+                <span>View Identity Stack</span><span>→</span>
               </div>
             </div>
           </div>
 
-          <!-- Code: True Salvation Chapel -->
-          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 transition-all duration-700 hover:border-gold/50 cursor-pointer" data-category="web">
-            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/60 to-transparent z-10"></div>
-            <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-[#1f162c] via-royal-blue to-midnight flex items-center justify-center">
+          <!-- True Salvation Chapel — gradient placeholder -->
+          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 cursor-pointer hover:border-gold/50" data-category="web">
+            <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-[#1f162c] via-royal-blue to-midnight flex items-center justify-center z-0">
               <svg class="w-24 h-24 text-gold/30 group-hover:scale-110 duration-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
               </svg>
             </div>
-            
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/55 to-transparent z-10"></div>
             <div class="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
               <span class="font-sans text-[10px] font-bold tracking-[0.2em] text-gold uppercase">Web Design</span>
               <h3 class="font-serif text-3xl font-medium text-white mt-2 mb-3">True Salvation Chapel</h3>
@@ -565,96 +479,82 @@
                 A pristine virtual monument pairing sacred architecture geometries with fluid, fast-loading cloud infrastructure.
               </p>
               <div class="mt-4 flex items-center gap-2 text-xs text-gold font-semibold uppercase tracking-widest">
-                <span>Explore Architecture</span>
-                <span class="text-xs">→</span>
+                <span>Explore Architecture</span><span>→</span>
               </div>
             </div>
           </div>
 
-          <!-- Code: Mefiri Ghana Visual Campaign -->
-          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 transition-all duration-700 hover:border-gold/50 cursor-pointer" data-category="creative">
-            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/60 to-transparent z-10"></div>
-            <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[linear-gradient(45deg,_var(--tw-gradient-stops))] from-gold/15 via-royal-blue to-[#0e162b] flex items-center justify-center">
+          <!-- Mefiri Ghana — gradient placeholder -->
+          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 cursor-pointer hover:border-gold/50" data-category="creative">
+            <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[linear-gradient(45deg,_var(--tw-gradient-stops))] from-gold/15 via-royal-blue to-[#0e162b] flex items-center justify-center z-0">
               <svg class="w-24 h-24 text-gold/30 group-hover:scale-110 duration-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
                 <circle cx="12" cy="12" r="10"/>
                 <polygon points="10 8 16 12 10 16 10 8"/>
               </svg>
             </div>
-            
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/55 to-transparent z-10"></div>
             <div class="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
               <span class="font-sans text-[10px] font-bold tracking-[0.2em] text-gold uppercase">Cinematic Film</span>
               <h3 class="font-serif text-3xl font-medium text-white mt-2 mb-3">Mefiri Ghana</h3>
               <p class="font-sans text-xs text-cream/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">
-                An archival cultural film visual campaign highlighting Ghanaian visual artistry, spiritual mission identity, and rich history.
+                An archival cultural film visual campaign highlighting Ghanaian artistry, spiritual mission identity, and rich history.
               </p>
               <div class="mt-4 flex items-center gap-2 text-xs text-gold font-semibold uppercase tracking-widest">
-                <span>Watch Visual Campaign</span>
-                <span class="text-xs">→</span>
+                <span>Watch Visual Campaign</span><span>→</span>
               </div>
             </div>
           </div>
 
-          <!-- Code: Beyond Entertainment -->
-          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 transition-all duration-700 hover:border-gold/50 cursor-pointer" data-category="creative">
-            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/60 to-transparent z-10"></div>
-            <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-midnight to-royal-blue flex items-center justify-center">
+          <!-- Beyond Entertainment — gradient placeholder -->
+          <div class="portfolio-item relative overflow-hidden group border border-gold/10 bg-royal-blue aspect-[4/5] flex flex-col justify-end p-8 cursor-pointer hover:border-gold/50" data-category="creative">
+            <div class="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/10 via-midnight to-royal-blue flex items-center justify-center z-0">
               <svg class="w-24 h-24 text-gold/30 group-hover:scale-110 duration-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
-                <path d="M12 2v2"/>
-                <path d="M12 20v2"/>
-                <circle cx="12" cy="12" r="7"/>
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
               </svg>
             </div>
-            
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/55 to-transparent z-10"></div>
             <div class="relative z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
               <span class="font-sans text-[10px] font-bold tracking-[0.2em] text-gold uppercase">Creative Brand Hub</span>
               <h3 class="font-serif text-3xl font-medium text-white mt-2 mb-3">Beyond Entertainment</h3>
               <p class="font-sans text-xs text-cream/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 leading-relaxed">
-                A massive creative branding concept demonstrating the absolute harmony of divine inspiration and elite technical performance.
+                A massive creative branding concept demonstrating the harmony of divine inspiration and elite technical performance.
               </p>
               <div class="mt-4 flex items-center gap-2 text-xs text-gold font-semibold uppercase tracking-widest">
-                <span>View Full Showcase</span>
-                <span class="text-xs">→</span>
+                <span>View Full Showcase</span><span>→</span>
               </div>
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
 
-    <!-- Elegant section divider -->
     <div class="gold-divider"></div>
 
-    <!-- 5. ABOUT SECTION -->
+    <!-- ==================== 5. ABOUT SECTION ==================== -->
     <section id="about" class="relative bg-cream text-midnight py-24 lg:py-32 overflow-hidden">
-      
-      <!-- Design Background Details -->
       <div class="absolute top-[10%] left-0 w-80 h-80 bg-gold/10 rounded-full blur-[110px] pointer-events-none"></div>
-
       <div class="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          
-          <!-- LEFT SIDE: Editorial Typography Copy -->
+
+          <!-- Left: copy -->
           <div class="lg:col-span-6 flex flex-col justify-center reveal">
-            <span class="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold mb-4">OUR SOURCE & PURPOSE</span>
+            <span class="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold mb-4">OUR SOURCE &amp; PURPOSE</span>
             <h2 class="font-serif text-4xl lg:text-6xl font-medium text-midnight leading-tight mb-8">
               Heaven Minded.<br /><span class="italic text-gold">Purpose Built.</span>
             </h2>
-            
             <div class="font-sans text-base text-midnight/80 leading-relaxed space-y-6 mb-10">
               <p>
-                Heaven Minded Studios was founded on the radical belief that creative excellence should serve a higher divine destiny. Through elite levels of music generation, cinematic films, visual branding, and web structures, we deploy experiences that actively inspire real faith, restoration, and hope in a modern digital landscape.
+                Heaven Minded Studios was founded on the radical belief that creative excellence should serve a higher divine destiny. Through elite levels of music, cinematic films, visual branding, and web structures, we deploy experiences that actively inspire real faith, restoration, and hope in the modern digital landscape.
               </p>
               <p>
-                Led by <strong class="text-midnight font-bold">AD Prince</strong>, a visionary musician, missionary, filmmaker, and creative director originally from Ghana, the studio serves global platforms. We merge rich West African soulful artistic depths with immaculate, responsive digital performance frameworks.
+                Led by <strong class="text-midnight font-bold">AD Prince</strong>, a visionary musician, missionary, filmmaker, and creative director originally from Ghana, the studio serves global platforms — merging rich West African artistic depth with immaculate, responsive digital performance frameworks.
               </p>
               <p class="italic text-[15px] font-medium border-l-2 border-gold pl-4 text-midnight/90">
-                “This is not simply a secondary creative agency. It is an active global artistic movement where absolute craftsmanship is married to divine intentionality.”
+                "This is not simply a creative agency. It is an active global artistic movement where absolute craftsmanship is married to divine intentionality."
               </p>
             </div>
-
-            <!-- CTA Trigger -->
             <div>
               <a href="#contact" class="btn-luxury inline-block px-8 py-4 bg-midnight text-cream border border-midnight text-xs font-semibold tracking-widest uppercase hover:bg-gold hover:text-midnight hover:border-gold transition-all duration-300">
                 Book a Consultation
@@ -662,58 +562,53 @@
             </div>
           </div>
 
-          <!-- RIGHT SIDE: Editorial Image Graphic with Frame -->
-          <div class="lg:col-span-6 flex flex-col items-center justify-center reveal reveal-right relative">
-            
-            <!-- Absolute background glow behind frame -->
-            <div class="absolute w-[300px] h-[300px] bg-gold/15 rounded-full blur-[100px] pointer-events-none -z-10 z-0"></div>
+          <!-- Right: AD Prince photo + editorial frame -->
+          <div class="lg:col-span-6 flex flex-col items-center justify-center reveal relative">
+            <div class="absolute w-[300px] h-[300px] bg-gold/15 rounded-full blur-[100px] pointer-events-none -z-10"></div>
 
-            <div class="editorial-frame w-full max-w-md bg-royal-blue aspect-[3/4] p-1 shadow-[20px_20px_40px_rgba(0,0,0,0.1)] flex flex-col justify-between">
-              
-              <!-- Top bar reminiscent of film / premium editorial layout -->
-              <div class="flex items-center justify-between px-4 py-3 border-b border-gold/15">
-                <span class="font-mono text-[9px] text-gold tracking-widest uppercase">AD PRINCE VISIONARY</span>
+            <div class="editorial-frame w-full max-w-md bg-royal-blue aspect-[3/4] p-1 shadow-[20px_20px_40px_rgba(0,0,0,0.1)] flex flex-col overflow-hidden">
+
+              <!-- Top editorial bar -->
+              <div class="flex items-center justify-between px-4 py-3 border-b border-gold/15 shrink-0">
+                <span class="font-mono text-[9px] text-gold tracking-widest uppercase">AD PRINCE — VISIONARY</span>
                 <span class="text-gold text-[10px]">✦ ✦</span>
               </div>
 
-              <!-- Graphic inner vector representation of Ghanian/Creative elements -->
-              <div class="flex-grow flex flex-col items-center justify-center p-6 relative">
-                <!-- Golden star symbol -->
-                <div class="absolute top-6 right-6 text-gold opacity-50 text-xl">✦</div>
-                
-                <h3 class="font-serif text-3xl text-center text-white font-light tracking-wide max-w-xs leading-relaxed mb-6">
-                  “Beyond entertainment, <br /><span class="italic text-gold">we inspire growth.</span>”
-                </h3>
-
-                <!-- Decorative Ghanaian Adinkra inspired spiritual structure graphic vector styling -->
-                <svg class="w-32 h-32 text-gold/40" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
-                  <circle cx="50" cy="50" r="40" stroke-dasharray="2, 6"/>
-                  <circle cx="50" cy="50" r="28" />
-                  <line x1="10" y1="50" x2="90" y2="50"/>
-                  <line x1="50" y1="10" x2="50" y2="90"/>
-                  <polygon points="50,22 65,50 50,78 35,50" />
-                  <circle cx="50" cy="36" r="4" fill="currentColor"/>
-                  <circle cx="50" cy="64" r="4" fill="currentColor"/>
-                  <circle cx="36" cy="50" r="4" fill="currentColor"/>
-                  <circle cx="64" cy="50" r="4" fill="currentColor"/>
-                </svg>
-
-                <p class="font-mono text-[8px] tracking-[0.3em] uppercase text-gold/60 mt-8 text-center">Ghana • Mission • Excellence</p>
+              <!-- Real AD Prince photo — fills available height -->
+              <div class="flex-grow founder-photo relative min-h-[200px]">
+                <!-- Subtle gold overlay tint on hover -->
+                <div class="absolute inset-0 bg-gold/0 group-hover:bg-gold/10 transition-colors duration-500 pointer-events-none"></div>
+                <!-- Fallback if photo missing: show decorative graphic -->
+                <div id="about-photo-fallback" class="hidden absolute inset-0 flex flex-col items-center justify-center p-6 bg-royal-blue">
+                  <h3 class="font-serif text-2xl text-center text-white font-light tracking-wide leading-relaxed mb-6">
+                    "Beyond entertainment,<br /><span class="italic text-gold">we inspire growth.</span>"
+                  </h3>
+                  <svg class="w-28 h-28 text-gold/40" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+                    <circle cx="50" cy="50" r="40" stroke-dasharray="2, 6"/>
+                    <circle cx="50" cy="50" r="28"/>
+                    <line x1="10" y1="50" x2="90" y2="50"/>
+                    <line x1="50" y1="10" x2="50" y2="90"/>
+                    <polygon points="50,22 65,50 50,78 35,50"/>
+                    <circle cx="50" cy="36" r="4" fill="currentColor"/>
+                    <circle cx="50" cy="64" r="4" fill="currentColor"/>
+                    <circle cx="36" cy="50" r="4" fill="currentColor"/>
+                    <circle cx="64" cy="50" r="4" fill="currentColor"/>
+                  </svg>
+                  <p class="font-mono text-[8px] tracking-[0.3em] uppercase text-gold/60 mt-6 text-center">Ghana • Mission • Excellence</p>
+                </div>
               </div>
 
-              <!-- Bottom editorial footer bar -->
-              <div class="px-4 py-3 border-t border-gold/15 flex items-center justify-between text-[9px] font-mono text-cream/60">
+              <!-- Bottom bar -->
+              <div class="px-4 py-3 border-t border-gold/15 flex items-center justify-between text-[9px] font-mono text-cream/60 shrink-0 bg-royal-blue">
                 <span>HEAVEN MINDED STUDIOS</span>
                 <span>EST. 2022</span>
               </div>
-
             </div>
-
           </div>
 
         </div>
 
-        <!-- STAT ROW - Stat counters animated elegantly -->
+        <!-- Stats row -->
         <div id="stats-section" class="mt-20 md:mt-28 border-t border-gold/20 pt-12 md:pt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
           <div class="reveal">
             <span class="block font-serif text-5xl md:text-7xl font-bold text-gold" data-target="50">0</span>
@@ -721,7 +616,7 @@
           </div>
           <div class="reveal">
             <span class="block font-serif text-5xl md:text-7xl font-bold text-gold" data-target="3">0</span>
-            <span class="block font-mono text-xs tracking-widest uppercase text-midnight/80 mt-2">Years Active & Building</span>
+            <span class="block font-mono text-xs tracking-widest uppercase text-midnight/80 mt-2">Years Active &amp; Building</span>
           </div>
           <div class="reveal">
             <span class="block font-serif text-5xl md:text-7xl font-bold text-gold" data-target="100">0</span>
@@ -732,42 +627,32 @@
       </div>
     </section>
 
-    <!-- Elegant section divider -->
     <div class="gold-divider"></div>
 
-    <!-- 6. TESTIMONIALS SECTION -->
+    <!-- ==================== 6. TESTIMONIALS SECTION ==================== -->
     <section id="testimonials" class="relative bg-midnight text-cream py-24 lg:py-32 overflow-hidden">
-      
-      <!-- Backdrop glow dynamic background representation -->
       <div class="absolute top-[30%] right-[10%] w-96 h-96 bg-royal-blue rounded-full blur-[140px] pointer-events-none"></div>
-
       <div class="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
-        
-        <!-- Section Title -->
+
         <div class="max-w-3xl mx-auto text-center mb-16 md:mb-24 reveal">
           <span class="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold">VOICES OF IMPACT</span>
           <h2 class="font-serif text-4xl md:text-6xl text-white font-medium mt-4 mb-6 leading-tight text-glow">
             Endorsement of Excellence
           </h2>
           <p class="font-sans text-lg text-cream/70 font-light leading-relaxed max-w-2xl mx-auto">
-            Read stories of transformation, digital authority, and pristine execution directly from leadership, musical, and non-profit industries.
+            Stories of transformation and pristine execution from leadership, musical, and non-profit industries.
           </p>
         </div>
 
-        <!-- Testimonial Carousel Elements Frame with manual side button controllers -->
         <div class="relative max-w-4xl mx-auto">
-          
-          <!-- Testimonial Items -->
           <div class="relative overflow-hidden min-h-[350px]">
-            
-            <!-- Slide 1 -->
+
             <blockquote id="testimonial-slide-0" class="testimonial-slide flex flex-col items-center text-center px-4 md:px-12 transition-all duration-700 opacity-100 transform translate-x-0">
-              <!-- Rating Stars -->
-              <div class="flex gap-1 text-gold text-lg mb-8">
+              <div class="flex gap-1 text-gold text-lg mb-8" aria-label="5 stars">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
               <p class="font-serif text-2xl md:text-3xl text-white/95 leading-relaxed font-light italic mb-8">
-                “Heaven Minded Studios didn't just design a website; they translated our spiritual vision into a digital temple. The elegance and high technical speed are pure excellence.”
+                "Heaven Minded Studios didn't just design a website — they translated our spiritual vision into a digital temple. The elegance and technical speed are pure excellence."
               </p>
               <cite class="not-italic flex flex-col items-center font-sans">
                 <span class="font-semibold text-white tracking-wide">Pastor David Kofi</span>
@@ -775,14 +660,12 @@
               </cite>
             </blockquote>
 
-            <!-- Slide 2 -->
             <blockquote id="testimonial-slide-1" class="testimonial-slide flex flex-col items-center text-center px-4 md:px-12 transition-all duration-700 opacity-0 transform translate-x-full absolute inset-0">
-              <!-- Rating Stars -->
-              <div class="flex gap-1 text-gold text-lg mb-8">
+              <div class="flex gap-1 text-gold text-lg mb-8" aria-label="5 stars">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
               <p class="font-serif text-2xl md:text-3xl text-white/95 leading-relaxed font-light italic mb-8">
-                “As an artist, finding a producer who understands both spiritual depth and elite, chart-topping music production is extremely rare. AD Prince is that visionary.”
+                "Finding a producer who understands both spiritual depth and elite chart-topping music production is extremely rare. AD Prince is that visionary."
               </p>
               <cite class="not-italic flex flex-col items-center font-sans">
                 <span class="font-semibold text-white tracking-wide">Sarah Mensah</span>
@@ -790,64 +673,52 @@
               </cite>
             </blockquote>
 
-            <!-- Slide 3 -->
             <blockquote id="testimonial-slide-2" class="testimonial-slide flex flex-col items-center text-center px-4 md:px-12 transition-all duration-700 opacity-0 transform translate-x-full absolute inset-0">
-              <!-- Rating Stars -->
-              <div class="flex gap-1 text-gold text-lg mb-8">
+              <div class="flex gap-1 text-gold text-lg mb-8" aria-label="5 stars">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
               <p class="font-serif text-2xl md:text-3xl text-white/95 leading-relaxed font-light italic mb-8">
-                “The cinematic visual identity built for our ministry media launch changed the way people connect with our message. Complete game changer.”
+                "The cinematic visual identity built for our ministry media launch changed the way people connect with our message. Complete game changer."
               </p>
               <cite class="not-italic flex flex-col items-center font-sans">
                 <span class="font-semibold text-white tracking-wide">Caleb Evans</span>
-                <span class="text-xs text-gold uppercase tracking-[0.1em] mt-1">Digital Outreach Director • salvation digital</span>
+                <span class="text-xs text-gold uppercase tracking-[0.1em] mt-1">Digital Outreach Director • Salvation Digital</span>
               </cite>
             </blockquote>
 
           </div>
 
-          <!-- Carousel Controls -->
           <div class="flex justify-center items-center gap-6 mt-12 z-10 relative">
-            <button id="carousel-prev" class="w-12 h-12 flex items-center justify-center border border-gold/30 hover:border-gold text-gold rounded-full transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-gold" aria-label="Previous testimonial">
-              ←
-            </button>
-            
-            <!-- Indicators Dots -->
+            <button id="carousel-prev" class="w-12 h-12 flex items-center justify-center border border-gold/30 hover:border-gold text-gold rounded-full transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-gold" aria-label="Previous testimonial">←</button>
             <div class="flex gap-3">
-              <button class="carousel-dot w-2 h-2 rounded-full bg-gold transition-all duration-300" data-slide="0" aria-label="Go to testimonial 1"></button>
-              <button class="carousel-dot w-2 h-2 rounded-full bg-gold/30 transition-all duration-300" data-slide="1" aria-label="Go to testimonial 2"></button>
-              <button class="carousel-dot w-2 h-2 rounded-full bg-gold/30 transition-all duration-300" data-slide="2" aria-label="Go to testimonial 3"></button>
+              <button class="carousel-dot w-2 h-2 rounded-full bg-gold transition-all duration-300" data-slide="0" aria-label="Testimonial 1"></button>
+              <button class="carousel-dot w-2 h-2 rounded-full bg-gold/30 transition-all duration-300" data-slide="1" aria-label="Testimonial 2"></button>
+              <button class="carousel-dot w-2 h-2 rounded-full bg-gold/30 transition-all duration-300" data-slide="2" aria-label="Testimonial 3"></button>
             </div>
-
-            <button id="carousel-next" class="w-12 h-12 flex items-center justify-center border border-gold/30 hover:border-gold text-gold rounded-full transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-gold" aria-label="Next testimonial">
-              →
-            </button>
+            <button id="carousel-next" class="w-12 h-12 flex items-center justify-center border border-gold/30 hover:border-gold text-gold rounded-full transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-gold" aria-label="Next testimonial">→</button>
           </div>
-
         </div>
 
       </div>
     </section>
 
-    <!-- Elegant section divider -->
     <div class="gold-divider"></div>
 
-    <!-- 7. CINEMATIC CTA BANNER -->
+    <!-- ==================== 7. CTA BANNER ==================== -->
     <section class="relative bg-gold text-midnight py-20 md:py-28 overflow-hidden">
-      
-      <!-- Subtle Motion Background Texture Grid -->
-      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-midnight via-transparent to-transparent"></div>
-      <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+      <!-- studio-bg.jpg as subtle texture underneath gold tint -->
+      <div class="absolute inset-0 studio-bg-img opacity-10 pointer-events-none"></div>
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-midnight via-transparent to-transparent pointer-events-none"></div>
+      <div class="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-6 lg:px-16 text-center relative z-10">
         <div class="max-w-3xl mx-auto reveal">
           <span class="font-sans text-[11px] font-bold tracking-[0.35em] uppercase text-midnight border border-midnight/20 px-3 py-1.5 inline-block mb-6">THE CALLING</span>
           <h2 class="font-serif text-4xl md:text-6xl font-medium text-midnight leading-tight mb-6">
-            Ready to Build Something <br class="hidden sm:inline" />that Lasts?
+            Ready to Build Something<br class="hidden sm:inline" /> that Lasts?
           </h2>
           <p class="font-sans text-base md:text-lg text-midnight/80 font-light max-w-xl mx-auto mb-10 leading-relaxed">
-            Let’s collaborate to create something truly meaningful, timeless, and purpose-driven that speaks with artistic excellence.
+            Let's collaborate to create something truly meaningful, timeless, and purpose-driven that speaks with artistic excellence.
           </p>
           <a href="#contact" class="btn-luxury inline-block px-8 py-4 bg-midnight text-cream border border-midnight font-semibold text-xs tracking-widest uppercase hover:bg-white hover:text-midnight hover:border-white transition-all duration-300">
             Book a Free Consultation
@@ -856,53 +727,40 @@
       </div>
     </section>
 
-    <!-- Elegant section divider -->
     <div class="gold-divider-cream"></div>
 
-    <!-- 8. CONTACT SECTION -->
+    <!-- ==================== 8. CONTACT SECTION ==================== -->
     <section id="contact" class="bg-midnight py-24 lg:py-32 relative overflow-hidden">
-      
-      <!-- Ambient Lights and Gradients with Z-index 1 -->
-      <div class="absolute top-1/3 left-1/10 w-[400px] h-[400px] bg-gold-glow rounded-full blur-[130px] pointer-events-none"></div>
-
+      <div class="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-gold/10 rounded-full blur-[130px] pointer-events-none"></div>
       <div class="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
-        
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          
-          <!-- LEFT SIDE: Modern premium contact form -->
+
+          <!-- Left: contact form -->
           <div class="lg:col-span-7 reveal">
-            
             <div class="mb-10">
               <span class="font-sans text-xs font-bold tracking-[0.3em] uppercase text-gold">LET'S CONNECT</span>
               <h2 class="font-serif text-4xl md:text-5xl text-white font-medium mt-2 mb-4 leading-tight text-glow">
                 Tell Us About Your Vision
               </h2>
               <p class="font-sans text-sm text-cream/70 font-light">
-                Fill in the details below. Our executive design directors will review your responses and reach out.
+                Fill in the details below. Our executive design directors will review and reach out within 24 hours.
               </p>
             </div>
 
-            <!-- Custom validated visual submit form -->
             <form id="vision-form" class="space-y-6" novalidate>
-              
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Name Field -->
                 <div class="flex flex-col gap-2">
                   <label for="client-name" class="font-sans text-xs font-semibold text-gold tracking-widest uppercase">Your Name *</label>
                   <input type="text" id="client-name" name="name" class="bg-royal-blue/60 border border-gold/25 p-4 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors font-sans text-sm" placeholder="AD Prince Ghana" required />
-                  <span class="text-red-400 text-xs mt-1 hidden" id="err-name">Please write your legal name.</span>
+                  <span class="text-red-400 text-xs mt-1 hidden" id="err-name">Please write your name.</span>
                 </div>
-
-                <!-- Email Field -->
                 <div class="flex flex-col gap-2">
-                  <label for="client-email" class="font-sans text-xs font-semibold text-gold tracking-widest uppercase">Your Email Address *</label>
+                  <label for="client-email" class="font-sans text-xs font-semibold text-gold tracking-widest uppercase">Email Address *</label>
                   <input type="email" id="client-email" name="email" class="bg-royal-blue/60 border border-gold/25 p-4 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors font-sans text-sm" placeholder="name@domain.com" required />
-                  <span class="text-red-400 text-xs mt-1 hidden" id="err-email">Please write a valid active email.</span>
+                  <span class="text-red-400 text-xs mt-1 hidden" id="err-email">Please enter a valid email.</span>
                 </div>
               </div>
-
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Project Type Select -->
                 <div class="flex flex-col gap-2">
                   <label for="project-type" class="font-sans text-xs font-semibold text-gold tracking-widest uppercase">Project Category</label>
                   <div class="relative">
@@ -910,121 +768,109 @@
                       <option value="branding" class="bg-midnight">Brand Identity Mastery</option>
                       <option value="web" class="bg-midnight">Bespoke Web Platform</option>
                       <option value="music" class="bg-midnight">Cinematic Music Production</option>
-                      <option value="creative" class="bg-midnight font-bold">Creative Direction Consultancy</option>
+                      <option value="creative" class="bg-midnight">Creative Direction Consultancy</option>
                     </select>
                     <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gold pointer-events-none text-xs">▼</span>
                   </div>
                 </div>
-
-                <!-- Budget Select -->
                 <div class="flex flex-col gap-2">
                   <label for="project-budget" class="font-sans text-xs font-semibold text-gold tracking-widest uppercase">Budget Scale (USD)</label>
                   <div class="relative">
                     <select id="project-budget" name="budget" class="w-full bg-royal-blue/60 border border-gold/25 p-4 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors font-sans text-sm appearance-none cursor-pointer">
-                      <option value="5k" class="bg-midnight">$3,000 - $5,000</option>
-                      <option value="10k" class="bg-midnight">$5,000 - $10,000</option>
-                      <option value="25k" class="bg-midnight font-bold">$10,000 - $25,000+</option>
-                      <option value="ministry" class="bg-midnight">Mission / Ministry Project scale</option>
+                      <option value="3k" class="bg-midnight">$3,000 – $5,000</option>
+                      <option value="10k" class="bg-midnight">$5,000 – $10,000</option>
+                      <option value="25k" class="bg-midnight">$10,000 – $25,000+</option>
+                      <option value="ministry" class="bg-midnight">Mission / Ministry Scale</option>
                     </select>
                     <span class="absolute right-4 top-1/2 -translate-y-1/2 text-gold pointer-events-none text-xs">▼</span>
                   </div>
                 </div>
               </div>
-
-              <!-- Message Field -->
               <div class="flex flex-col gap-2">
                 <label for="client-message" class="font-sans text-xs font-semibold text-gold tracking-widest uppercase">Brief Story of Your Vision *</label>
                 <textarea id="client-message" name="message" rows="5" class="bg-royal-blue/60 border border-gold/25 p-4 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors font-sans text-sm resize-none" placeholder="Inspire us. What divine purpose does this project serve?" required></textarea>
-                <span class="text-red-400 text-xs mt-1 hidden" id="err-message">Please tell us a brief description of your project.</span>
+                <span class="text-red-400 text-xs mt-1 hidden" id="err-message">Please describe your project vision.</span>
               </div>
-
-              <!-- Submit button -->
               <button type="submit" class="btn-luxury w-full py-4 bg-gold text-midnight font-bold text-xs tracking-widest uppercase transition-all duration-300 shadow-[0_4px_15px_rgba(201,168,76,0.15)] hover:shadow-[0_4px_30px_rgba(201,168,76,0.4)] hover:bg-white hover:text-midnight focus:outline-none focus:ring-2 focus:ring-gold">
-                Send Message & Book Consultation
+                Send Message &amp; Book Consultation
               </button>
-
             </form>
 
-            <!-- Success Box -->
-            <div id="form-success" class="bg-royal-blue/80 border-2 border-gold p-8 text-center rounded-none shadow-[0_0_20px_rgba(201,168,76,0.25)] space-y-4">
+            <div id="form-success" class="bg-royal-blue/80 border-2 border-gold p-8 text-center shadow-[0_0_20px_rgba(201,168,76,0.25)] space-y-4">
               <svg class="w-16 h-16 text-gold mx-auto animate-pulse-slow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
               </svg>
-              <h3 class="font-serif text-3xl text-white font-medium">Message received. We’ll be in touch shortly.</h3>
+              <h3 class="font-serif text-3xl text-white font-medium">Message received. We'll be in touch shortly.</h3>
               <p class="font-sans text-sm text-cream/70 max-w-md mx-auto">
-                Thank you for entrusting us with your vision. AD Prince and our lead creative directors look forward to reviewing and inspiring together.
+                Thank you for entrusting us with your vision. AD Prince and our lead creative directors look forward to connecting with you.
               </p>
             </div>
-
           </div>
 
-          <!-- RIGHT SIDE: Contact Detail Handles -->
-          <div class="lg:col-span-5 flex flex-col justify-between reveal reveal-right border-l border-gold/15 lg:pl-16">
-            
+          <!-- Right: contact info -->
+          <div class="lg:col-span-5 flex flex-col justify-between reveal border-l border-gold/15 lg:pl-16">
             <div class="space-y-12">
               <div>
-                <span class="font-sans text-[10px] font-bold tracking-[0.25em] text-gold uppercase">DIRECT HEAVEN CORRESPONDENCE</span>
+                <span class="font-sans text-[10px] font-bold tracking-[0.25em] text-gold uppercase">DIRECT CORRESPONDENCE</span>
                 <p class="font-serif text-2xl text-white mt-1">Heaven Minded Studios HQ</p>
                 <a href="mailto:hello@heavenmindedstudios.com" class="font-sans text-lg text-cream/80 hover:text-gold block mt-4 transition-colors duration-300">
                   hello@heavenmindedstudios.com
                 </a>
               </div>
 
-              <!-- Socials List with icons -->
               <div class="space-y-6">
                 <span class="font-sans text-[10px] font-bold tracking-[0.25em] text-gold uppercase block">FELLOWSHIP CHANNELS</span>
-                
                 <div class="grid grid-cols-2 gap-4">
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 p-3 bg-royal-blue/40 border border-gold/10 hover:border-gold transition-colors duration-300">
-                    <span class="text-gold group-hover:scale-110 duration-300">📷</span>
+                  <a href="https://instagram.com/heavenmindedstudios" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 p-3 bg-royal-blue/40 border border-gold/10 hover:border-gold transition-colors duration-300">
+                    <span class="text-gold">📷</span>
                     <span class="font-sans text-xs tracking-widest uppercase font-medium text-cream/80 group-hover:text-gold">Instagram</span>
                   </a>
-                  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 p-3 bg-royal-blue/40 border border-gold/10 hover:border-gold transition-colors duration-300">
-                    <span class="text-gold group-hover:scale-110 duration-300">🎬</span>
+                  <a href="https://youtube.com/@heavenmindedstudios" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 p-3 bg-royal-blue/40 border border-gold/10 hover:border-gold transition-colors duration-300">
+                    <span class="text-gold">🎬</span>
                     <span class="font-sans text-xs tracking-widest uppercase font-medium text-cream/80 group-hover:text-gold">YouTube</span>
                   </a>
-                  <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 p-3 bg-royal-blue/40 border border-gold/10 hover:border-gold transition-colors duration-300">
-                    <span class="text-gold group-hover:scale-110 duration-300">🎨</span>
+                  <a href="https://behance.net/heavenmindedstudios" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 p-3 bg-royal-blue/40 border border-gold/10 hover:border-gold transition-colors duration-300">
+                    <span class="text-gold">🎨</span>
                     <span class="font-sans text-xs tracking-widest uppercase font-medium text-cream/80 group-hover:text-gold">Behance</span>
                   </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 p-3 bg-royal-blue/40 border border-gold/10 hover:border-gold transition-colors duration-300">
-                    <span class="text-gold group-hover:scale-110 duration-300">💼</span>
+                  <a href="https://linkedin.com/company/heavenmindedstudios" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 p-3 bg-royal-blue/40 border border-gold/10 hover:border-gold transition-colors duration-300">
+                    <span class="text-gold">💼</span>
                     <span class="font-sans text-xs tracking-widest uppercase font-medium text-cream/80 group-hover:text-gold">LinkedIn</span>
                   </a>
                 </div>
               </div>
             </div>
 
-            <!-- Adinkra decorative line visual styling -->
             <div class="mt-16 pt-8 border-t border-gold/15 hidden lg:block">
-              <span class="font-serif text-lg italic text-gold block">“Inspired by Grace. Built in Excellence.”</span>
+              <span class="font-serif text-lg italic text-gold block">"Inspired by Grace. Built in Excellence."</span>
               <span class="font-sans text-[10px] text-cream/60 tracking-wider block mt-1">Serving clients from Ghana to Europe, North America and across the globe.</span>
             </div>
-
           </div>
 
         </div>
-
       </div>
     </section>
 
-    <!-- 9. FOOTER -->
-    <footer class="bg-midnight border-t border-gold/30 text-cream/80 py-16 pr-6 pl-6 lg:px-16" role="contentinfo">
+    <!-- ==================== 9. FOOTER ==================== -->
+    <footer class="bg-midnight border-t border-gold/30 text-cream/80 py-16 px-6 lg:px-16" role="contentinfo">
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-        
-        <!-- Left Branding Copy -->
+
         <div class="flex flex-col items-center md:items-start select-none">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="font-serif text-2xl font-bold tracking-wide text-white">Heaven Minded</span>
-            <span class="font-sans text-[9px] font-bold tracking-[0.3em] text-gold uppercase">Studios</span>
+          <!-- Footer logo image -->
+          <div class="flex items-center gap-3 mb-2">
+            <img src="./public/images/logo.png" alt="Heaven Minded Studios" class="w-8 h-8 object-contain"
+                 onerror="this.style.display='none'" />
+            <div>
+              <span class="font-serif text-2xl font-bold tracking-wide text-white">Heaven Minded</span>
+              <span class="font-sans text-[9px] font-bold tracking-[0.3em] text-gold uppercase ml-2">Studios</span>
+            </div>
           </div>
           <p class="font-sans text-xs text-cream/60 tracking-wider text-center md:text-left mt-1">
             "Beyond Entertainment — We Inspire."
           </p>
         </div>
 
-        <!-- Center Nav Navigation links -->
-        <nav class="flex flex-wrap items-center justify-center gap-6 text-xs font-semibold uppercase tracking-widest" aria-label="Footer links">
+        <nav class="flex flex-wrap items-center justify-center gap-6 text-xs font-semibold uppercase tracking-widest" aria-label="Footer navigation">
           <a href="#hero" class="hover:text-gold transition-colors duration-300">Home</a>
           <a href="#services" class="hover:text-gold transition-colors duration-300">Services</a>
           <a href="#portfolio" class="hover:text-gold transition-colors duration-300">Portfolio</a>
@@ -1033,27 +879,21 @@
           <a href="#contact" class="hover:text-gold transition-colors duration-300">Contact</a>
         </nav>
 
-        <!-- Right Copyright Disclaimer and Ghanaian representation -->
         <div class="flex flex-col items-center md:items-end font-sans text-xs text-cream/60">
-          <span>&copy; <span id="current-year">2026</span> Heaven Minded Studios.</span>
-          <span class="mt-1 text-[11px] text-gold/80 flex items-center gap-1">Designed with Divine Excellence 🇬🇭 ✦ 🇺🇸</span>
+          <span>&copy; <span id="current-year">2025</span> Heaven Minded Studios.</span>
+          <span class="mt-1 text-[11px] text-gold/80">Designed with Divine Excellence 🇬🇭 ✦ 🇺🇸</span>
         </div>
 
       </div>
     </footer>
 
-
-    <!-- ================== SCRIPT INTEGRATIONS & CORE JS ================== -->
-
-    <!-- Interactive Canvas & Core Animations Vanilla JS -->
+    <!-- ==================== SCRIPTS ==================== -->
     <script>
-      // Automatically update copyright year if present
       document.getElementById('current-year').textContent = new Date().getFullYear();
 
-      // Ensure viewport load
       window.addEventListener('DOMContentLoaded', () => {
 
-        // ================== A24 CORE THEME STICKY COOKIE NAVBAR ==================
+        // --- STICKY NAV ---
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
           if (window.scrollY > 50) {
@@ -1063,9 +903,9 @@
             navbar.classList.remove('bg-midnight/95', 'shadow-[0_10px_30px_rgba(0,0,0,0.3)]', 'backdrop-blur-md', 'py-4');
             navbar.classList.add('py-6');
           }
-        });
+        }, { passive: true });
 
-        // ================== MOBILE NAVBAR BURGER ==================
+        // --- MOBILE MENU ---
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
@@ -1089,41 +929,35 @@
             mobileMenuBtn.children[2].classList.add('-rotate-45', '-translate-y-[6px]');
           }
         }
-
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', toggleMobileMenu));
+        mobileLinks.forEach(l => l.addEventListener('click', toggleMobileMenu));
         mobileCta.addEventListener('click', toggleMobileMenu);
 
-
-        // ================== HIGH QUALITY STARS PARTICLE SYSTEM ==================
+        // --- STAR CANVAS ---
         const canvas = document.getElementById('stars-canvas');
         if (canvas) {
           const ctx = canvas.getContext('2d');
-          let starArray = [];
-          
+          let stars = [];
           function resizeCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
           }
-          window.addEventListener('resize', resizeCanvas);
+          window.addEventListener('resize', resizeCanvas, { passive: true });
           resizeCanvas();
 
-          // Particle class constructor
           class Star {
             constructor() {
               this.x = Math.random() * canvas.width;
               this.y = Math.random() * canvas.height;
               this.size = Math.random() * 1.8 + 0.2;
               this.speedX = Math.random() * 0.12 - 0.06;
-              this.speedY = Math.random() * -0.2 - 0.02; // slow rising cosmic dust motion
+              this.speedY = Math.random() * -0.2 - 0.02;
               this.opacity = Math.random() * 0.7 + 0.1;
-              this.isGold = Math.random() > 0.82; // Some stars elements have logo gold
+              this.isGold = Math.random() > 0.82;
             }
             update() {
               this.x += this.speedX;
               this.y += this.speedY;
-              
-              // wrap around coordinate space
               if (this.y < 0) this.y = canvas.height;
               if (this.x < 0 || this.x > canvas.width) this.x = Math.random() * canvas.width;
             }
@@ -1132,94 +966,57 @@
               ctx.globalAlpha = this.opacity;
               ctx.fillStyle = this.isGold ? '#C9A84C' : '#FFFFFF';
               ctx.beginPath();
-              // Glow star design with arc
               ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
               ctx.fill();
-              
-              if (this.isGold && this.size > 1.2) {
-                ctx.shadowBlur = 10;
-                ctx.shadowColor = '#C9A84C';
-                // optional gold crosshairs flares
-              }
               ctx.restore();
             }
           }
 
-          // Initial Array populate
-          const starCount = Math.min(Math.floor(window.innerWidth / 7), 160);
-          for (let i = 0; i < starCount; i++) {
-            starArray.push(new Star());
-          }
+          const count = Math.min(Math.floor(window.innerWidth / 7), 160);
+          for (let i = 0; i < count; i++) stars.push(new Star());
 
           function animateStars() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (let i = 0; i < starArray.length; i++) {
-              starArray[i].update();
-              starArray[i].draw();
-            }
+            stars.forEach(s => { s.update(); s.draw(); });
             requestAnimationFrame(animateStars);
           }
           animateStars();
         }
 
-
-        // ================== PARALLAX FLOATING EFFECTS ON HERO MOVEMENT ==================
+        // --- HERO PARALLAX GLOW ---
         const heroSection = document.getElementById('hero');
         const glow1 = document.getElementById('parallax-glow-1');
         const glow2 = document.getElementById('parallax-glow-2');
-
         if (heroSection && glow1 && glow2) {
           heroSection.addEventListener('mousemove', (e) => {
-            const xPercent = (e.clientX / window.innerWidth - 0.5) * 45;
-            const yPercent = (e.clientY / window.innerHeight - 0.5) * 45;
-            glow1.style.transform = `translate(${xPercent}px, ${yPercent}px)`;
-            glow2.style.transform = `translate(${-xPercent}px, ${-yPercent}px)`;
-          });
+            const x = (e.clientX / window.innerWidth - 0.5) * 45;
+            const y = (e.clientY / window.innerHeight - 0.5) * 45;
+            glow1.style.transform = `translate(${x}px, ${y}px)`;
+            glow2.style.transform = `translate(${-x}px, ${-y}px)`;
+          }, { passive: true });
         }
 
+        // --- SCROLL REVEAL ---
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObs = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.14 });
+        revealEls.forEach(el => revealObs.observe(el));
 
-        // ================== INTERSECTION OBSERVER REVEAL ANIMATIONS ==================
-        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-        const obsOptions = {
-          root: null,
-          threshold: 0.14,
-          rootMargin: "0px"
-        };
-
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-              // Unobserve if target wants singular trigger
-              // observer.unobserve(entry.target);
-            }
-          });
-        }, obsOptions);
-
-        revealElements.forEach(el => revealObserver.observe(el));
-
-
-        // ================== PORTFOLIO JS FILTER INTERACTIONS ==================
+        // --- PORTFOLIO FILTER ---
         const filterBtns = document.querySelectorAll('.filter-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
-
         filterBtns.forEach(btn => {
-          btn.addEventListener('click', (e) => {
-            // Toggle active classes
-            filterBtns.forEach(b => b.classList.remove('active', 'bg-gold', 'text-midnight'));
-            btn.classList.add('active', 'bg-gold', 'text-midnight');
-
-            const filterValue = btn.getAttribute('data-filter');
-
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.getAttribute('data-filter');
             portfolioItems.forEach(item => {
-              const category = item.getAttribute('data-category');
-              if (filterValue === 'all' || category === filterValue) {
+              const cat = item.getAttribute('data-category');
+              if (filter === 'all' || cat === filter) {
                 item.style.display = 'flex';
-                // Trigger smooth keyframe
                 item.style.opacity = '0';
-                setTimeout(() => {
-                  item.style.opacity = '1';
-                }, 50);
+                setTimeout(() => { item.style.transition = 'opacity 0.4s ease'; item.style.opacity = '1'; }, 50);
               } else {
                 item.style.display = 'none';
               }
@@ -1227,161 +1024,101 @@
           });
         });
 
-
-        // ================== NUMERICAL STAT COUNTER ON SCROLL ==================
+        // --- STAT COUNTERS ---
         const statsSection = document.getElementById('stats-section');
-        let counterAnimateTriggered = false;
-
+        let countersRun = false;
         if (statsSection) {
-          const statsObserver = new IntersectionObserver((entries) => {
-            const [entry] = entries;
-            if (entry.isIntersecting && !counterAnimateTriggered) {
-              counterAnimateTriggered = true;
-              
-              const statsValueHolders = statsSection.querySelectorAll('[data-target]');
-              statsValueHolders.forEach(holder => {
-                const targetValue = parseInt(holder.getAttribute('data-target'), 10);
-                const isPercent = targetValue === 100;
-                let currentVal = 0;
-                const speed = targetValue / 40; // Total frames count
-
-                const updateCount = () => {
-                  if (currentVal < targetValue) {
-                    currentVal += Math.ceil(speed);
-                    if (currentVal >= targetValue) {
-                      holder.textContent = targetValue + (isPercent ? '%' : '+');
-                    } else {
-                      holder.textContent = currentVal + (isPercent ? '%' : '+');
-                      setTimeout(updateCount, 25);
-                    }
-                  }
+          new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !countersRun) {
+              countersRun = true;
+              statsSection.querySelectorAll('[data-target]').forEach(el => {
+                const target = parseInt(el.getAttribute('data-target'), 10);
+                const isPercent = target === 100;
+                let curr = 0;
+                const speed = Math.max(1, target / 40);
+                const tick = () => {
+                  curr = Math.min(curr + Math.ceil(speed), target);
+                  el.textContent = curr + (isPercent ? '%' : '+');
+                  if (curr < target) setTimeout(tick, 25);
                 };
-                updateCount();
+                tick();
               });
             }
-          }, { threshold: 0.35 });
-
-          statsObserver.observe(statsSection);
+          }, { threshold: 0.35 }).observe(statsSection);
         }
 
-
-        // ================== PREMIUM SLIDE TESTIMONIALS CAROUSEL ==================
+        // --- TESTIMONIAL CAROUSEL ---
         const slides = document.querySelectorAll('.testimonial-slide');
         const dots = document.querySelectorAll('.carousel-dot');
-        const prevBtn = document.getElementById('carousel-prev');
-        const nextBtn = document.getElementById('carousel-next');
-        let currentSlideIndex = 0;
-        let testimonialsInterval;
+        let current = 0;
+        let autoplay;
 
-        function showSlide(index) {
-          // Wrap borders
-          if (index >= slides.length) index = 0;
-          if (index < 0) index = slides.length - 1;
-
-          slides.forEach((slide, i) => {
-            slide.classList.remove('opacity-100', 'translate-x-0');
-            slide.classList.add('opacity-0', 'translate-x-full', 'absolute');
-            
+        function showSlide(idx) {
+          if (idx >= slides.length) idx = 0;
+          if (idx < 0) idx = slides.length - 1;
+          slides.forEach((s, i) => {
+            s.classList.remove('opacity-100', 'translate-x-0');
+            s.classList.add('opacity-0', 'translate-x-full', 'absolute');
             dots[i].classList.remove('bg-gold');
             dots[i].classList.add('bg-gold/30');
           });
-
-          // Mount selected
-          slides[index].classList.remove('opacity-0', 'translate-x-full', 'absolute');
-          slides[index].classList.add('opacity-100', 'translate-x-0');
-          dots[index].classList.add('bg-gold');
-          dots[index].classList.remove('bg-gold/30');
-
-          currentSlideIndex = index;
+          slides[idx].classList.remove('opacity-0', 'translate-x-full', 'absolute');
+          slides[idx].classList.add('opacity-100', 'translate-x-0');
+          dots[idx].classList.add('bg-gold');
+          dots[idx].classList.remove('bg-gold/30');
+          current = idx;
         }
 
-        // Action handles
-        if (prevBtn && nextBtn) {
-          prevBtn.addEventListener('click', () => {
-            clearInterval(testimonialsInterval);
-            showSlide(currentSlideIndex - 1);
-          });
-          nextBtn.addEventListener('click', () => {
-            clearInterval(testimonialsInterval);
-            showSlide(currentSlideIndex + 1);
-          });
-        }
+        document.getElementById('carousel-prev').addEventListener('click', () => { clearInterval(autoplay); showSlide(current - 1); });
+        document.getElementById('carousel-next').addEventListener('click', () => { clearInterval(autoplay); showSlide(current + 1); });
+        dots.forEach(d => d.addEventListener('click', () => { clearInterval(autoplay); showSlide(parseInt(d.getAttribute('data-slide'), 10)); }));
+        autoplay = setInterval(() => showSlide(current + 1), 6000);
 
-        dots.forEach(dot => {
-          dot.addEventListener('click', () => {
-            clearInterval(testimonialsInterval);
-            const targetSlide = parseInt(dot.getAttribute('data-slide'), 10);
-            showSlide(targetSlide);
-          });
-        });
-
-        // Set autoplay
-        function startCarousel() {
-          testimonialsInterval = setInterval(() => {
-            showSlide(currentSlideIndex + 1);
-          }, 6000);
-        }
-        startCarousel();
-
-
-        // ================== REAL FORM CONTACT JS VALIDATION ==================
+        // --- CONTACT FORM VALIDATION ---
         const form = document.getElementById('vision-form');
         const formSuccess = document.getElementById('form-success');
-
         if (form && formSuccess) {
-          form.addEventListener('submit', (evt) => {
-            evt.preventDefault();
-            
-            // Grabs fields
-            const inputName = document.getElementById('client-name');
-            const inputEmail = document.getElementById('client-email');
-            const inputMessage = document.getElementById('client-message');
-
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nameEl = document.getElementById('client-name');
+            const emailEl = document.getElementById('client-email');
+            const msgEl = document.getElementById('client-message');
             const errName = document.getElementById('err-name');
             const errEmail = document.getElementById('err-email');
-            const errMessage = document.getElementById('err-message');
+            const errMsg = document.getElementById('err-message');
+            let valid = true;
 
-            let isValid = true;
+            if (!nameEl.value.trim()) {
+              errName.classList.remove('hidden'); nameEl.classList.add('border-red-400'); valid = false;
+            } else { errName.classList.add('hidden'); nameEl.classList.remove('border-red-400'); }
 
-            // Simple validation checks with real error displays
-            if (!inputName.value.trim()) {
-              errName.classList.remove('hidden');
-              inputName.classList.add('border-red-400');
-              isValid = false;
-            } else {
-              errName.classList.add('hidden');
-              inputName.classList.remove('border-red-400');
-            }
+            const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailEl.value.trim() || !emailRx.test(emailEl.value.trim())) {
+              errEmail.classList.remove('hidden'); emailEl.classList.add('border-red-400'); valid = false;
+            } else { errEmail.classList.add('hidden'); emailEl.classList.remove('border-red-400'); }
 
-            // Email Pattern test
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!inputEmail.value.trim() || !emailRegex.test(inputEmail.value.trim())) {
-              errEmail.classList.remove('hidden');
-              inputEmail.classList.add('border-red-400');
-              isValid = false;
-            } else {
-              errEmail.classList.add('hidden');
-              inputEmail.classList.remove('border-red-400');
-            }
+            if (!msgEl.value.trim() || msgEl.value.trim().length < 10) {
+              errMsg.classList.remove('hidden'); msgEl.classList.add('border-red-400'); valid = false;
+            } else { errMsg.classList.add('hidden'); msgEl.classList.remove('border-red-400'); }
 
-            if (!inputMessage.value.trim() || inputMessage.value.trim().length < 10) {
-              errMessage.classList.remove('hidden');
-              inputMessage.classList.add('border-red-400');
-              isValid = false;
-            } else {
-              errMessage.classList.add('hidden');
-              inputMessage.classList.remove('border-red-400');
-            }
-
-            // If completely valid, transition form state to success popup
-            if (isValid) {
+            if (valid) {
               form.style.display = 'none';
               formSuccess.style.display = 'block';
-
-              // Clean up inputs
               form.reset();
             }
           });
+        }
+
+        // --- AD PRINCE PHOTO FALLBACK ---
+        const founderPhoto = document.querySelector('.founder-photo');
+        if (founderPhoto) {
+          const testImg = new Image();
+          testImg.src = './public/images/ad-prince.jpg';
+          testImg.onerror = () => {
+            founderPhoto.style.backgroundImage = 'none';
+            const fallback = document.getElementById('about-photo-fallback');
+            if (fallback) { fallback.classList.remove('hidden'); fallback.style.display = 'flex'; }
+          };
         }
 
       });
