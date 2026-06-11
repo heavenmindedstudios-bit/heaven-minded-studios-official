@@ -39,12 +39,12 @@ const services = [
 ]
 
 const portfolio = [
-  { id: 1, cat: 'music',    title: 'Kingdom Sound',         subtitle: 'Music Production',    desc: 'An archival deep-rhythm gospel album crafted for ultimate healing atmosphere and high-end acoustic space.', cta: 'View Cinematic Cover', bg: '/images/portfolio-1.jpg' },
-  { id: 2, cat: 'web',      title: 'Grace Culture',         subtitle: 'Web Platform',        desc: 'A custom bespoke virtual parish built with deep accessibility, immersive media channels, and pristine minimalist UX.', cta: 'Explore Site Design', bg: '/images/background.jpg' },
-  { id: 3, cat: 'branding', title: 'Elevation Conference',  subtitle: 'Brand Campaign',      desc: 'Complete dynamic branding visual stack with responsive typography layers, motion graphics, and large format prints.', cta: 'View Identity Stack', bg: '' },
-  { id: 4, cat: 'web',      title: 'True Salvation Chapel', subtitle: 'Web Design',          desc: 'A pristine virtual monument pairing sacred architecture geometries with fluid, fast-loading cloud infrastructure.', cta: 'Explore Architecture', bg: '' },
-  { id: 5, cat: 'creative', title: 'Mefiri Ghana',          subtitle: 'Cinematic Film',      desc: 'An archival cultural film visual campaign highlighting Ghanaian artistry, spiritual mission identity, and rich history.', cta: 'Watch Visual Campaign', bg: '' },
-  { id: 6, cat: 'creative', title: 'Beyond Entertainment',  subtitle: 'Creative Brand Hub',  desc: 'A massive creative branding concept demonstrating the harmony of divine inspiration and elite technical performance.', cta: 'View Full Showcase', bg: '' },
+  { id: 1, cat: 'music',    title: 'Kingdom Sound',         subtitle: 'Music Production',    desc: 'An archival deep-rhythm gospel album crafted for ultimate healing atmosphere and high-end acoustic space.', cta: 'Listen on Audiomack', bg: '/images/portfolio-1.jpg', link: 'https://audiomack.com/ad-prince-1' },
+  { id: 2, cat: 'web',      title: 'Grace Culture',         subtitle: 'Web Platform',        desc: 'A custom bespoke virtual parish built with deep accessibility, immersive media channels, and pristine minimalist UX.', cta: 'Explore Site Design', bg: '/images/background.jpg', link: '' },
+  { id: 3, cat: 'branding', title: 'Elevation Conference',  subtitle: 'Brand Campaign',      desc: 'Complete dynamic branding visual stack with responsive typography layers, motion graphics, and large format prints.', cta: 'View Identity Stack', bg: '', link: '' },
+  { id: 4, cat: 'web',      title: 'True Salvation Chapel', subtitle: 'Web Design',          desc: 'A pristine virtual monument pairing sacred architecture geometries with fluid, fast-loading cloud infrastructure.', cta: 'Explore Architecture', bg: '', link: '' },
+  { id: 5, cat: 'creative', title: 'Mefiri Ghana',          subtitle: 'Cinematic Film',      desc: 'An archival cultural film visual campaign highlighting Ghanaian artistry, spiritual mission identity, and rich history.', cta: 'Watch Visual Campaign', bg: '', link: 'https://www.youtube.com/@revadprince/videos' },
+  { id: 6, cat: 'creative', title: 'Beyond Entertainment',  subtitle: 'Creative Brand Hub',  desc: 'A massive creative branding concept demonstrating the harmony of divine inspiration and elite technical performance.', cta: 'View Full Showcase', bg: '', link: 'https://www.youtube.com/@revadprince/releases' },
 ]
 
 const testimonials = [
@@ -384,7 +384,12 @@ export default function App() {
 
           <div className="portfolio-grid">
             {filtered.map(p => (
-              <div key={p.id} className="portfolio-item">
+              <div
+                key={p.id}
+                className="portfolio-item"
+                onClick={() => p.link && window.open(p.link, '_blank', 'noopener,noreferrer')}
+                style={{ cursor: p.link ? 'pointer' : 'default' }}
+              >
                 {p.bg
                   ? <div className="item-bg" style={{ backgroundImage: `url('${p.bg}')` }} role="img" aria-label={`${p.title} project thumbnail`} />
                   : <div className="item-fallback" aria-hidden="true">
