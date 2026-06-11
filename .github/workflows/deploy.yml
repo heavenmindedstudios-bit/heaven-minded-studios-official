@@ -15,8 +15,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install --legacy-peer-deps
+      - name: Delete package-lock and reinstall
+        run: |
+          rm -f package-lock.json
+          npm install
 
       - name: Build
         run: npm run build
