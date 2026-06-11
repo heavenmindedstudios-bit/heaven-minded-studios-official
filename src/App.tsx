@@ -639,9 +639,9 @@ export default function App() {
                   <div className="socials-grid">
                     {[
                       { emoji: '📷', label: 'Instagram', href: 'https://instagram.com/heavenmindedstudios' },
-{ emoji: '🎬', label: 'YouTube',   href: 'https://www.youtube.com/@HeavenMindedStudio' },
-{ emoji: '📘', label: 'Facebook',  href: 'https://web.facebook.com/profile.php?id=61575600745199' },
-{ emoji: '💬', label: 'WhatsApp',  href: 'https://wa.me/233205314701' },
+                      { emoji: '🎬', label: 'YouTube',   href: 'https://www.youtube.com/@HeavenMindedStudio' },
+                      { emoji: '📘', label: 'Facebook',  href: 'https://web.facebook.com/profile.php?id=61575600745199' },
+                      { emoji: '💬', label: 'WhatsApp',  href: 'https://wa.me/233205314701' },
                     ].map(s => (
                       <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="social-link">
                         <span>{s.emoji}</span>
